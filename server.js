@@ -17,9 +17,13 @@ app.get('/images', (req, res) => {
 app.get('/getImage/:imageId', (req, res) => {
     const q = 'SELECT images.id, images.title, images.image_url AS "imageUrl", images.author FROM images WHERE id = $1'
     const params = [ req.params.imageId ]
+    console.log("here");
 
     db.query(q, params)
-        .then(results => res.json(results.rows[0]))
+        .then(results => {
+            console.log(results);
+            res.json(results.rows[0])
+        })
         .catch(err => console.log("There was an error in getImage GET route: ", err))
 })
 

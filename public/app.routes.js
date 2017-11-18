@@ -31,7 +31,6 @@ angular.module('instaRoutes', ['ui.router', 'instaService'])
             'main': {
                 templateUrl: 'pages/single-image.html',
                 controller: function($stateParams, $scope, instaService) {
-
                     instaService.getImage($stateParams.imageId)
                         .then(image => {
                             console.log("ressssss",image);

@@ -7,9 +7,12 @@ insta.controller('mainController', function($scope, instaService) {
         .catch(err => $scope.imageErr = err)
 });
 
-insta.controller('singleImageController', function($scope, instaService) {
-
-    instaService.getImage()
-        .then(image => $scope.image = image)
-        .catch(err => $scope.imageErr = err)
-})
+// insta.controller('singleImageController', function($scope, instaService) {
+//
+//     instaService.getImage()
+//         .then(image => {
+//             console.log(image);
+//             $scope.image = image
+//         })
+//         .catch(err => $scope.imageErr = err)
+// })
