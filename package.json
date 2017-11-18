@@ -1,0 +1,16 @@
+{
+  "name": "image_upload_with_angularjs",
+  "version": "1.0.0",
+  "description": "Image board built with AngularJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "mattyfew",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2",
+    "pg": "^7.4.0",
+    "spiced-pg": "https://github.com/spicedacademy/spiced-pg"
+  }
+}

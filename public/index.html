@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+    <title>My Angular App</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body ng-app="insta">
+
+    <main ng-controller="mainController">
+        <h1>Welcome to Insta</h1>
+        <nav>
+            <ul>
+                <li><a ui-sref="home">home</a></li>
+                <li><a ui-sref="about">about</a></li>
+            </ul>
+        </nav>
+        <div ui-view="main">
+
+        </div>
+
+
+
+    </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.min.js" charset="utf-8"></script>
+    <script src="app.routes.js" charset="utf-8"></script>
+    <script src="app.js" charset="utf-8"></script>
+</body>
+
+</html>
