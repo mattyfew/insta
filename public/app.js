@@ -1,17 +1,15 @@
-const insta = angular.module('insta', ['routes'])
+let insta = angular.module('insta', ['instaRoutes', 'instaService', 'instaDirectives'])
 
 
-insta.controller('mainController', function($scope, $http) {
-    $http.get('/images')
-        .then(({data}) => {
-            console.log(data);
-            $scope.images = data
-        })
-        .catch(err => {
-            $scope.imageError = 'something went wrong with data fetch'
-        })
+insta.controller('mainController', function($scope, instaService) {
+    instaService.getImages()
+        .then(images => $scope.images = images)
+        .catch(err => $scope.imageErr = err)
 });
 
-insta.controller('singleImageController', function() {
+insta.controller('singleImageController', function($scope, instaService) {
 
+    instaService.getImage()
+        .then(image => $scope.image = image)
+        .catch(err => $scope.imageErr = err)
 })
