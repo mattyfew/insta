@@ -49,11 +49,9 @@ angular.module('instaRoutes', ['ui.router', 'instaService'])
                 controller: function($stateParams, $scope, instaService) {
                     $scope.title = ''
                     $scope.user = ''
-                    $scope.file = {}
-
 
                     $scope.submit = () => {
-                        console.log($scope.title, $scope.user, $scope.file);
+                        console.log($scope.title, $scope.user);
                         var file = $('input[type="file"]').get(0).files[0];
                         console.log(file);
 

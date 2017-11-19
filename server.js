@@ -65,36 +65,30 @@ app.get('/getImage/:imageId', (req, res) => {
 })
 
 app.post('/upload-image', uploader.single('file'), (req, res) => {
-    console.log("inside POST /upload-image", req.file)
-
     if (req.file) {
-
         const { user, title } = req.body;
-
-        console.log("reight hererere!");
 
         const s3Request = client.put(req.file.filename, {
             'Content-Type': req.file.mimetype,
             'Content-Length': req.file.size,
             'x-amz-acl': 'public-read'
         });
-        console.log("about to create stream", req.file.path);
+
         const readStream = fs.createReadStream(req.file.path);
         readStream.pipe(s3Request);
 
         s3Request.on('response', s3Response => {
-            console.log("we are here");
             const wasSuccessful = s3Response.statusCode == 200;
-            const q = 'INSERT INTO images (imageUrl, user, title) VALUES ($1, $2, $3)'
+            const q = 'INSERT INTO images (image_url, author, title) VALUES ($1, $2, $3)'
             const params = [ req.file.filename, user, title ]
 
             db.query(q, params)
             .then(() => {
-                console.log(req.file.filename, wasSuccessful);
+                console.log("successfully uploaded ", req.file.filename);
                 res.json({ success: wasSuccessful });
             })
             .catch((err) => {
-                console.log(err);
+                console.log("There was an error in upload-image query", err);
                 res.json({ success: false });
             })
         });
