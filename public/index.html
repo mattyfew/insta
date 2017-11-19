@@ -8,19 +8,25 @@
 <body ng-app="insta">
 
     <main ng-controller="mainController">
-        <nav>
-            <header>
-                <h1>Insta</h1>
-            </header>
-            <ul>
-                <li><a ui-sref="home">home</a></li>
-                <li><a ui-sref="about">about</a></li>
-            </ul>
-        </nav>
+
+        <div id="nav-container">
+            <nav class="bar">
+                <header>
+                    <!-- SVG by Yousuf from The Noun Project -->
+                    <a ui-sref="home"><img id="nav-logo" src="images/camera.svg" alt="logo"></a>
+                </header>
+                <ul>
+                    <li><a ui-sref="home">home</a></li>
+                    <li><a ui-sref="about">about</a></li>
+                    <li><a ui-sref="upload">upload</a></li>
+                </ul>
+            </nav>
+        </div>
 
         <div ui-view="main"></div>
     </main>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.min.js" charset="utf-8"></script>
     <script src="app.routes.js" charset="utf-8"></script>

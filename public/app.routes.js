@@ -39,5 +39,34 @@ angular.module('instaRoutes', ['ui.router', 'instaService'])
                 }
             }
         }
+    })
+
+    .state('upload',{
+        url: '/upload',
+        views: {
+            'main': {
+                templateUrl: 'pages/upload.html',
+                controller: function($stateParams, $scope, instaService) {
+                    $scope.title = ''
+                    $scope.user = ''
+                    $scope.file = {}
+
+
+                    $scope.submit = () => {
+                        console.log($scope.title, $scope.user, $scope.file);
+                        var file = $('input[type="file"]').get(0).files[0];
+                        console.log(file);
+
+                        instaService.uploadImage($scope.title, $scope.user, file)
+                            .then(() => {
+                                console.log("something happened");
+                            })
+                            .catch(() => {
+                                console.log("uh oh :/");
+                            })
+                    }
+                }
+            }
+        }
     });
 });

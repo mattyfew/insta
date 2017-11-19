@@ -1,17 +1,39 @@
 body {
     font-family: 'Open Sans', sans-serif;
     color: #34495e; background-color: #ecf0f1;
+    margin: 0;
 }
 
-.image { max-width: 400px; }
+.image { max-width: 380px; }
 
 #images-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    height: 80vh;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: inherit;
 }
 #single-image {
     max-width: 800px;
     max-height: 500px;
 }
 /*.image-container { flex: 1 1 33% }*/
+
+
+/* Navigation
+================================*/
+#nav-logo { max-height: 100px; margin: -18px 0 -35px 0;  min-width: 70px; min-height: 100px; }
+#nav-container { background: #4BAAC8; }
+.bar {
+    display: flex;
+    align-items: center;
+    max-width: 1160px;
+    margin: 0 auto;
+    padding-left: 5px;
+}
+.search { flex: 1; }
+.search input { width: 100%; }
+nav ul { display: flex; list-style-type: none; }
+nav a { color: white; text-decoration: none; }
+nav a:hover { color: #1C4CB2; }
+nav li { padding-right: 15px; }
