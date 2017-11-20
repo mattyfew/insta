@@ -46,21 +46,19 @@ angular.module('instaRoutes', ['ui.router', 'instaService'])
         views: {
             'main': {
                 templateUrl: 'pages/upload.html',
-                controller: function($stateParams, $scope, instaService) {
+                controller: function($stateParams, $scope, $state, $rootScope, instaService) {
                     $scope.title = ''
                     $scope.user = ''
 
                     $scope.submit = () => {
-                        console.log($scope.title, $scope.user);
-                        var file = $('input[type="file"]').get(0).files[0];
-                        console.log(file);
-
+                        const file = $('input[type="file"]').get(0).files[0];
                         instaService.uploadImage($scope.title, $scope.user, file)
                             .then(() => {
-                                console.log("something happened");
+                                console.log("about to navigate to home", $rootScope);
+                                $state.go('home')
                             })
-                            .catch(() => {
-                                console.log("uh oh :/");
+                            .catch((err) => {
+                                console.log("uh oh :/", err);
                             })
                     }
                 }

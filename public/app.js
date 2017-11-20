@@ -1,10 +1,15 @@
 let insta = angular.module('insta', ['instaRoutes', 'instaService', 'instaDirectives'])
 
 
-insta.controller('mainController', function($scope, instaService) {
+insta.controller('mainController', function($scope, $rootScope, instaService) {
     instaService.getImages()
         .then(images => $scope.images = images)
         .catch(err => $scope.imageErr = err)
+
+    $rootScope.$on('upload:success', function() {
+        console.log("WAFFLESSS");
+    })
+
 });
 
 // insta.controller('singleImageController', function($scope, instaService) {

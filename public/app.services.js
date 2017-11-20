@@ -1,6 +1,6 @@
 angular.module('instaService', [])
 
-.service('instaService', function($http) {
+.service('instaService', function($http, $state) {
     this.getImages = () => {
         return $http.get('/images')
             .then(({data}) => data)
@@ -15,12 +15,10 @@ angular.module('instaService', [])
     }
 
     this.uploadImage = (title, user, file) => {
-
         var formData = new FormData();
         formData.append('title', title);
         formData.append('user', user);
         formData.append('file', file)
-        console.log("running uploadImage", formData)
 
         return $http({
             url: '/upload-image',
@@ -29,8 +27,7 @@ angular.module('instaService', [])
             headers: { 'Content-Type': undefined },
             transformRequest: angular.identity
         })
-            .then(() => console.log("upload successful????"))
-            .catch(err => err)
+        .catch(err => err)
     }
 
 })

@@ -7,11 +7,11 @@ body {
 .image { max-width: 380px; }
 
 #images-container {
-    display: flex;
-    height: 80vh;
-    flex-flow: column wrap;
-    justify-content: flex-start;
-    align-items: inherit;
+    column-width: 300px;
+    column-gap: 50px;
+    width: 90%;
+    max-width: 1160px;
+    margin: 50px auto;
 }
 #single-image {
     max-width: 800px;
@@ -23,7 +23,7 @@ body {
 /* Navigation
 ================================*/
 #nav-logo { max-height: 100px; margin: -18px 0 -35px 0;  min-width: 70px; min-height: 100px; }
-#nav-container { background: #4BAAC8; }
+#nav-container { background: #2c3e50; }
 .bar {
     display: flex;
     align-items: center;
@@ -37,3 +37,12 @@ nav ul { display: flex; list-style-type: none; }
 nav a { color: white; text-decoration: none; }
 nav a:hover { color: #1C4CB2; }
 nav li { padding-right: 15px; }
+
+
+
+/* Single Image View
+================================*/
+
+#single-image-container {
+    text-align: center;
+}
