@@ -46,3 +46,24 @@ nav li { padding-right: 15px; }
 #single-image-container {
     text-align: center;
 }
+
+
+/* Upload Form
+================================*/
+
+#upload-container h1 { text-align: center; }
+#upload-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 550px;
+    margin: 0 auto;
+}
+#upload-form input {
+    padding: 20px 30px;
+    font-size: 20px;
+}
+#upload-form button {
+    padding: 15px;
+    font-size: 28px;
+    background-color: #1abc9c;
+}
