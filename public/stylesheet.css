@@ -67,3 +67,16 @@ nav li { padding-right: 15px; }
     font-size: 28px;
     background-color: #1abc9c;
 }
+
+
+/* Single Image View
+================================*/
+
+#about-container {}
+
+
+
+/* helpers
+================================*/
+
+.center { text-align: center; }

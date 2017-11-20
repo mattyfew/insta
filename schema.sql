@@ -14,8 +14,8 @@ INSERT INTO images (title, author, image_url) VALUES ('Bavaria in the Winter', '
 INSERT INTO images (title, author, image_url) VALUES ('berlin_needle', 'mattyfew', '_XanAET9m_AKdrohT4qh24S9v44UPhMK.jpg');
 INSERT INTO images (title, author, image_url) VALUES ('View from the Victory Tor', 'paupaufowfow', 'AQqyiFnlA341p0wyfqW8VIsl0e0cD8_A.jpg');
 INSERT INTO images (title, author, image_url) VALUES ('Mountains in Sydney', 'mattyfew', 'l-aWDqYNugurxegKuohVzQSAhBbuMc46.jpg');
-INSERT INTO images (title, author, image_url) VALUES ('Lost Somewhere', 'jfew', 'iswanto-arif.jpg');
-INSERT INTO images (title, author, image_url) VALUES ('In the middle', 'jfew', 'hollie-harmsworth.jpg');
+INSERT INTO images (title, author, image_url) VALUES ('Lost Somewhere', 'jfew', 'rqJx25zTHijzZhvdFT6pXYBuCzvqEmRR.jpg');
+INSERT INTO images (title, author, image_url) VALUES ('In the middle', 'jfew', 'd8UOmYjXZ22jWRfMDhrPd-HsceqVSOTS.jpg');
 INSERT INTO images (title, author, image_url) VALUES ('Cliffs of Moher', 'jfew', 'qaol_zuQ0X41hR1YnSHCrNy3JgRGRVvM.jpg');
 INSERT INTO images (title, author, image_url) VALUES ('Just beyond the brush', 'mattyfew', 'jnliVmRi3CNWyE3tloKdp60qAYCQxcFO.jpg');
 INSERT INTO images (title, author, image_url) VALUES ('Majestic af', 'jfew', 'rt87PePqgtpnNKNCiWJUx8e2B6TJoAcn.jpg');
