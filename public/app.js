@@ -1,3 +1,5 @@
+location.hash = '/'
+
 let insta = angular.module('insta', ['instaRoutes', 'instaService', 'instaDirectives'])
 
 

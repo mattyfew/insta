@@ -7,7 +7,7 @@
 </head>
 <body ng-app="insta">
 
-    <main ng-controller="mainController">
+    <div ng-controller="mainController">
 
         <div id="nav-container">
             <nav class="bar">
@@ -23,8 +23,11 @@
             </nav>
         </div>
 
-        <div ui-view="main"></div>
-    </main>
+        <main ui-view="main"></main>
+        <div ui-view="modal" autoscroll="false"></div>
+
+        <footer>site by <a target="_blank "href="http://mattfewer.com">mattyfew</a></footer>
+    </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>

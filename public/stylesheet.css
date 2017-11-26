@@ -5,6 +5,9 @@ body {
 }
 
 .image { max-width: 380px; }
+main {
+    padding-top: 25px
+}
 
 #images-container {
     column-width: 300px;
@@ -18,12 +21,29 @@ body {
     max-height: 500px;
 }
 /*.image-container { flex: 1 1 33% }*/
+footer {
+    background-color: #2c3e50;
+    position: fixed;
+    bottom: 0;
+    color: white;
+    width: 100%;
+    text-align: right;
+    padding: 4px;
+    font-size: 13px;
+}
+footer a { color: #909090; padding-right: 40px; }
+footer a:hover { color: white; }
 
 
 /* Navigation
 ================================*/
 #nav-logo { max-height: 100px; margin: -18px 0 -35px 0;  min-width: 70px; min-height: 100px; }
-#nav-container { background: #2c3e50; }
+#nav-container {
+    background: #2c3e50;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
 .bar {
     display: flex;
     align-items: center;
@@ -50,6 +70,29 @@ nav li { padding-right: 15px; }
 
 /* Upload Form
 ================================*/
+
+.backdrop {
+ position: fixed;
+ top: 0px;
+ left: 0px;
+ height:100%;
+ width:100%;
+ background: #000;
+ z-index: 1;
+ opacity: 0.5;
+}
+
+#upload-container {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height:100%;
+  width:100%;
+  background: transparent;
+  z-index: 2;
+  padding: 30px 15px;
+}
+
 
 #upload-container h1 { text-align: center; }
 #upload-form {

@@ -7,7 +7,7 @@ angular.module('instaRoutes', ['ui.router', 'instaService'])
     .state('home',{
         url: '/',
         views: {
-          'main': {
+            'main': {
                 templateUrl: 'pages/main.html'
             }
         }
@@ -33,7 +33,6 @@ angular.module('instaRoutes', ['ui.router', 'instaService'])
                 controller: function($stateParams, $scope, instaService) {
                     instaService.getImage($stateParams.imageId)
                         .then(image => {
-                            console.log("ressssss",image);
                             $scope.image = image
                         })
                 }
@@ -54,15 +53,18 @@ angular.module('instaRoutes', ['ui.router', 'instaService'])
                         const file = $('input[type="file"]').get(0).files[0];
                         instaService.uploadImage($scope.title, $scope.user, file)
                             .then(() => {
-                                console.log("about to navigate to home", $rootScope);
                                 $state.go('home')
                             })
                             .catch((err) => {
-                                console.log("uh oh :/", err);
+                                console.log("There was an error in submit", err);
                             })
                     }
                 }
-            }
+            },
+            // 'modal': {
+            //     templateUrl: 'pages/upload.html',
+            // }
         }
     });
+
 });
